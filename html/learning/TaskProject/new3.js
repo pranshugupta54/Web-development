@@ -35,16 +35,18 @@ function addFunction(InputBoxId,ListId){
     let newButton = document.createElement("button");
     newButton.classList.add('btn', 'mt-2', 'btn-outline-danger', 'rounded-0');
     newButton.setAttribute('type', "button");
-    newButton.setAttribute('onclick', 'removeFunction(addTask1,TaskList1)')
+    newButton.setAttribute('onclick', 'removeFunction(this)')
     newButton.innerHTML = "Remove";
     
     ListId.append(newButton);
     InputBoxId.value = ``;
-    newInputId = ListId.id + "-i-" + newDiv.parentNode.children.length;
-    newButtonId = ListId.id + "-b-" + newDiv.parentNode.children.length;
+    newInputId = ListId.id + "-" + newDiv.parentNode.children.length + "-b-i";
+    newButtonId = ListId.id + "-" + newDiv.parentNode.children.length + "-b";
     newDiv.setAttribute('id',newInputId);
     newButton.setAttribute('id',newButtonId);
     console.log(newDiv.textContent + " => " + newDiv.id);
+    console.log(newDiv.textContent + " => " + newButton.id);
+    
 }
 
 /*
@@ -56,7 +58,13 @@ ListId.append(newDiv);
 
 
 
-function removeFunction(){
-console.log("<--- Remove Button --->");
-console.log();
+function removeFunction(obj){
+// console.log("<--- Remove Button --->");
+// console.log(obj.id);
+InputBoxId = obj.id + "-i";
+// console.log("----")
+// console.log(InputBoxId);
+document.getElementById(InputBoxId).remove();
+document.getElementById(obj.id).remove();
+console.log("Deleted => " + obj.id);
 }
