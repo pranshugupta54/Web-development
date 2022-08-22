@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Form</title>
+    <link rel="stylesheet" href="style/payment.css">
+
+</head>
+<body>
+    <form action="">
+    <header> <h1>Payment Form </h1> </header>
+    <nav class="nav">
+        <a href="home.html">Home</a>
+        <a href="course.html">Courses</a>
+        <a href="about_us.html">About Us</a>
+        <a href="payment.html">Buy Now</a>
+        <a href="contact.html">Contact Us</a>
+        <a href="sign_up.html">Sign Up</a>
+    </nav>
+    <br>
+    <section>
+      <fieldset>
+        <legend> <h2>Contact Details </h2> </legend>
+        <p class="req">Required items are marked with asterisk (*)</p>
+        <p>Name: *<input type="text" name="name" id="name" required></p>
+        <p>Phone Number: *<input type="number" name="ph_number" id="ph_number" required></p>
+            <fieldset class="gender_class">
+                <legend>Gender *</legend>
+                <input type="radio" name="gender" id="Male" required> Male <br>
+                <input class="female" type="radio" name="gender" id="Female" required> Female <br>
+                <input class="others" type="radio" name="gender" id="Others" required> Others
+
+                </ul>
+            </fieldset>
+        <p>Address: <textarea name="Address" id="Address" cols="50" rows="5"></textarea></p>
+        <p>Email: *<input type="email" name="email" id="email" required></p>
+        <p>Pincode: *<input type="number" name="pincode" id="pincode" required></p>
+      <!-- </fieldset> -->
+    <!-- </section> -->
+    <br>
+    <hr>
+    <!-- <section> -->
+    <!-- <fieldset> -->
+        <legend> <h2>Payment Info</h2> </legend>
+        <p> Card Type: *
+            <select name="card_type" id="card_type" required>
+                <option value="">--Select a card--</option>
+                <option value="visa">Visa</option>
+                <option value="MasterCard">MasterCard</option>
+                <option value="Rupay">Rupay</option>
+            </select>
+        <p>Card Number: *<input type="number" name="card_number" id="card_number" required></p>
+        <p>Expiration Date: *<input type="date" name="exp_date" id="exp_date" required></p>
+        <p>CVV: *<input type="password" name="cvv" id="cvv" required></p>
+        <p><input type="submit" value="Pay Now"></p>
+      </fieldset>
+    </section>
+    </form>
+    <div class="footer">
+        <footer>
+            Copyright &copy; 2022 | Pranshu Gupta
+        </footer>
+    </div>
+
+</body>
+</html>

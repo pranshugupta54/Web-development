@@ -1,0 +1,55 @@
+*{
+    box-sizing: border-box;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0px;
+    padding: 0px;
+}
+
+h2,h4{
+    text-align: center;
+    padding: 0px;
+    margin: 0;
+}
+body{
+    background-image: linear-gradient(to right,#43cea2,#185a9d);
+    margin-top: 10%;
+}
+
+fieldset{
+    background-color: white;
+    border-radius: 19px;
+    margin: 0 auto;
+    padding: 20px 10px 20px 10px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 500px;
+    border: none;
+}
+
+p{
+    margin: 1px;
+    margin-left: 2px;
+    font-weight: 400;
+}
+
+input,textarea{
+    margin: 6px;
+    border: 2px solid rgba(167, 245, 136, 0.719);
+    padding: 5px 5px 5px 5px;
+    width: 98%;
+    border-radius: 6px;
+}
+
+input[type="button"]{
+    background-image: linear-gradient(to right,#43cea2,#185a9d);
+    text-align: center;
+    padding: 5px 1px 5px 1px;
+    width: 150px;
+    font-size: 17px;
+    border-radius: 19px;
+    color: white;
+
+}
+#button{
+    text-align: center;
+}

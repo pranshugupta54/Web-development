@@ -1,0 +1,108 @@
+.line1{
+    background-color: rgb(247, 118, 68);
+    width: 40%;
+    height: auto;
+    margin: 0.5%;
+    padding: 1%;
+    border-radius: 6px;
+
+}
+
+.line_one{
+    display: flex;
+    flex-direction: row;
+}
+
+
+.line2{
+    background-color: rgb(247, 118, 68);
+    width: 35%;
+    margin: 0.5%;
+    padding: 1%;
+    border-radius: 6px;
+
+}
+
+.line_two{
+    display: flex;
+    flex-direction: row;
+}
+
+
+.line3{
+    background-color: rgb(247, 118, 68);
+    width: 35%;
+    margin: 0.5%;
+    padding: 1%;
+    border-radius: 6px;
+
+}
+
+.line_three{
+    display: flex;
+    flex-direction: row;
+}
+
+.text1{
+    margin:0;
+}
+
+
+/*
+
+*/
+
+
+
+
+.inline1{
+    background-color: rgb(238, 202, 202);
+    width:40%;
+    display: flex;
+    flex-direction: row;
+    height: auto;
+    padding: 2%;
+    margin: 1%;
+    float: left;
+    border-radius: 6px;
+}
+
+.inline_one{
+    display: flex;
+    flex-direction: row;
+}
+
+
+.inline2{
+    background-color: rgb(238, 202, 202);
+    width: 35%;
+    display: flex;
+    flex-direction: row;
+    margin: 0.5%;
+    padding: 2%;
+    border-radius: 6px;
+
+}
+
+.inline_two{
+    display: flex;
+    flex-direction: row;
+}
+
+
+.inline3{
+    background-color: rgb(238, 202, 202);
+    width: 35%;
+    display: flex;
+    flex-direction: row;
+    margin: 0.5%;
+    padding: 2%;
+    border-radius: 6px;
+
+}
+
+.inline_three{
+    display: flex;
+    flex-direction: row;
+}
+ 

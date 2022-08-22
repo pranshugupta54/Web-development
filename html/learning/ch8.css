@@ -1,0 +1,23 @@
+.container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-gap: 20px;
+    height: 95vh;
+}
+.items{
+    background-color: greenyellow;
+    border: 3px solid black;
+    height: auto;
+    padding: 2px;
+    border-radius: 7px;
+    text-align: center;
+}
+
+.row{
+    display: grid;
+    grid-gap: 10px;
+}
+
+.first{
+    height: 99%;
+}

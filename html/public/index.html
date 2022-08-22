@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>Invite Management</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<meta property="og:title" content="Invite Management" />
+	<meta property="og:description" content="An invite tracking bot bundled with useful utility features." />
+	<meta property="description" content="An invite tracking bot bundled with useful utility features." />
+	<meta name="twitter:card" content="summary_large_image">
+	<meta property="twitter:image" content="https://i.imgur.com/1ELlK1Z.png" />
+	<meta property="og:url"
+		content="https://discord.com/api/oauth2/authorize?client_id=873934253468024852&permissions=347176&scope=bot%20applications.commands" />
+	<meta name="author" content="Siris" />
+	<meta property="theme-color" content="#5865F2" />
+
+	<link rel="icon" type="image/webp" href="./assets/logo-without-bg.webp">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400;0,700;1,400&display=swap"
+		rel="stylesheet">
+
+	<script type="module" src="https://unpkg.com/@skyra/discord-components-core"></script>
+
+	<link rel="stylesheet" type="text/css" href="./styles/bs.css">
+	<link rel="stylesheet" type="text/css" href="./styles/main.css">
+</head>
+
+<body>
+	<div class="sticky-top">
+		<div id="invicord-notice" role="alert" class="text-center link-success">
+			<a href="https://invicord.xyz" target="_blank">
+				Invicord: An efficient and reliable tracking solution. Click me to learn more!
+			</a>
+		</div>
+		<div class="navbar navbar-expand-lg navbar-dark sticky-top navbar-bg">
+			<span class="navbar-brand mb-0 h1 bold-p">Invite Management</span>
+			<button id="navbar-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+				data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+				aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<div class="navbar-collapse collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item active">
+						<a class="nav-link bold-s" href="#">Home <span class="sr-only">(current)</span></a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link bold-s" href="#features">Features</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link bold-s" href="https://docs.invi-bot.xyz" target="_blank">Documentation</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link bold-s" href="#premium">Premium</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<div class="p-4" id="main">
+		<header id="header" class="header">
+			<div class="header-content">
+				<div class="container">
+					<div class="row pt-5 pb-4">
+						<div class="col-lg-6 pt-4 pb-4 d-inline-flex align-items-center justify-content-center">
+							<div class="text-container">
+								<h1 style="display: inline; color: var(--primary);">Invi</h1>
+								<h1 style="display: inline;">te Management</h1>
+
+								<p>is an invite tracking bot bundled with useful utility features.<br>Some
+									of
+									its features are:
+								<div class="list">
+									<ul>
+										<li>Invite tracking</li>
+										<li>Advanced Verification</li>
+										<li>Customisable join/leave messages with
+											embeds</li>
+										<li>Auto-refresh invite leaderboard</li>
+										<li>Embed Builder</li>
+									</ul>
+								</div>
+								</p>
+								<div class="button-box">
+									<div class="button-wrapper">
+										<button type="button" class="btn btn-lg btn-main" onclick="window.open('https://discord.com/api/oauth2/authorize?client_id=873934253468024852&permissions=347176&scope=bot%20applications.commands',
+									'_blank')">Invite</button>
+									</div>
+									<div class="button-wrapper">
+										<button type="button" class="btn btn-lg btn-sec"
+											onclick="window.open('https://discord.gg/3Xkb6bYzxw', '_blank')">Support</button>
+									</div>
+									<div class="button-wrapper">
+										<button type="button" class="btn btn-lg btn-ic" onclick="window.open('https://invicord.xyz',
+									'_blank')">Invicord</button>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-lg-6 pt-4 pb-4 d-inline-flex align-items-center justify-content-center">
+							<discord-messages class="box-ring-up">
+								<discord-message profile="invi">
+									<discord-command slot="reply" profile="siris" command="/invites">
+									</discord-command>
+									<discord-embed slot="embeds" author-image="./assets/siris.webp"
+										author-name="Siris#1337" color="#5865F2">
+										<discord-embed-fields slot="fields">
+											<discord-embed-field field-title="">
+												<b>257</b> Invites
+											</discord-embed-field>
+											<discord-embed-field field-title=":joins: Joins" inline inline-index="1">
+												<b>842</b>
+											</discord-embed-field>
+											<discord-embed-field field-title=":leaves: Leaves" inline inline-index="2">
+												<b>585</b>
+											</discord-embed-field>
+											<discord-embed-field field-title=":bonus: Bonus" inline inline-index="3">
+												<b>0</b>
+											</discord-embed-field>
+											<discord-embed-field field-title=":yes: Verified Users">
+												<b>220</b> users (<span class="code-block-inline">85.60</span>%)
+											</discord-embed-field>
+										</discord-embed-fields>
+									</discord-embed>
+								</discord-message>
+							</discord-messages>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+
+		<div class="container">
+			<br><br><br>
+			<div class="row pt-4 pb-4">
+				<div class="col-lg-4 text-center align-items-center justify-content-center">
+					<h4 id="stats-servers" class="inline-block">0</h4>
+					<h6 class="inline-block">SERVERS</h6>
+				</div>
+				<div class="col-lg-4 text-center align-items-center justify-content-center">
+					<h4 id="stats-members" class="inline-block">0</h4>
+					<h6 class="inline-block">USERS</h6>
+				</div>
+				<div class="col-lg-4 text-center align-items-center justify-content-center">
+					<h4 id="stats-invites" class="inline-block">0</h4>
+					<h6 class="inline-block">INVITES</h6>
+				</div>
+			</div>
+			<br>
+		</div>
+		<div class="container">
+			<br><br><br>
+			<div class="row">
+				<div class="col-lg-12 text-center">
+					<a id="features">
+						<h2 class="bold-p">FEATURES</h2>
+					</a>
+				</div>
+				<br>
+			</div>
+		</div>
+		<div class="container">
+			<div class="row pt-4 pb-4">
+				<div class="col-lg-6 pt-4 pb-4 d-inline-flex align-items-center justify-content-center">
+					<discord-messages class="box-ring-right">
+						<discord-message profile="invi">
+							<discord-embed slot="embeds" thumbnail="./assets/liamm.webp" color="#66f359">
+								<discord-embed-fields slot="fields">
+									<discord-embed-field field-title=":joins: Welcome" inline inline-index="1">
+										╭・<discord-mention>liamm.</discord-mention><br>
+										﹕・<span class="code-block-inline">liamm.#1337</span><br>
+										╰・Account created <span class="discord-date">a year ago</span>
+									</discord-embed-field>
+								</discord-embed-fields>
+								<discord-embed-footer slot="footer" footer-image="./assets/id.webp">783813584677109790
+								</discord-embed-footer>
+							</discord-embed>
+							<discord-embed slot="embeds" thumbnail="./assets/siris.webp" color="#5865f2"
+								footer-image="./assets/server.webp">
+								<discord-embed-fields slot="fields">
+									<discord-embed-field field-title=":inviter: Inviter">
+										╭・<discord-mention>Siris</discord-mention><br>
+										﹕・<span class="code-block-inline">Siris#1337</span><br>
+										﹕・<span class="code-block-inline">259</span> invites<br>
+										╰・<discord-custom-emoji name=":joins:" embed-emoji="true">
+										</discord-custom-emoji><span class="code-block-inline">844</span>
+										<discord-custom-emoji name=":leaves:" embed-emoji="true">
+										</discord-custom-emoji><span class="code-block-inline">585</span>
+									</discord-embed-field>
+									<discord-embed-field field-title=":invite-code: Invite code">
+										╭・<span class="code-block-inline"><a href="https://discord.gg/3Xkb6bYzxw"
+												target="_blank">3Xkb6bYzxw</a></span><br>
+										﹕・<discord-mention type="channel">・︳rules</discord-mention><br>
+										╰・<span class="code-block-inline">719</span> uses
+									</discord-embed-field>
+								</discord-embed-fields>
+								<discord-embed-footer slot="footer" footer-image="./assets/server.webp">Invite
+									Management
+									now
+									has 2577 members!
+								</discord-embed-footer>
+							</discord-embed>
+							<discord-attachments slot="components">
+								<discord-action-row>
+									<discord-button url="https://discord.gg/3Xkb6bYzxw" emoji="./assets/rules.webp"
+										emoji-name="rules">
+										Rules</discord-button>
+								</discord-action-row>
+							</discord-attachments>
+						</discord-message>
+					</discord-messages>
+				</div>
+				<div class="col-lg-6 pt-4 pb-4 d-inline-flex align-items-center justify-content-center">
+					<p>
+					<div class="list">
+						<h3 class="bold-s">Customisable join/leave messages</h3>
+						<ul>
+							<li>Use the bot's embed builder to easily design templates for welcome/leave messages</li>
+							<li>Upto 10 embeds</li>
+							<li>Upto 5 URL style buttons</li>
+						</ul>
+					</div>
+					</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="container">
+			<div class="row pt-4 pb-4">
+				<div class="col-lg-6 pt-4 pb-4 d-inline-flex align-items-center justify-content-center">
+					<p>
+					<div class="list">
+						<h3 class="bold-s">Advanced Verification System</h3>
+						<ul>
+							<li>Protect your server from artificial user accounts</li>
+							<li>Uses buttons instead of standard text verification</li>
+							<li>Supports 3 different types of verification</li>
+						</ul>
+					</div>
+					</p>
+				</div>
+				<div class="col-lg-6 pt-4 pb-4 d-inline-flex align-items-center justify-content-center">
+					<discord-messages class="box-ring-left">
+						<discord-message profile="invi">
+							<discord-embed author-image="./assets/siris.webp" author-name="Siris#1337" color="#5865F2">
+								<discord-embed-fields slot="fields">
+									<discord-embed-field field-title="Enter these numbers">
+										<span class="code-block">4923</span>
+									</discord-embed-field>
+									<discord-embed-field field-title="Input">
+										<span class="code-block" id="input-field-verification">&#8205;</span>
+									</discord-embed-field>
+								</discord-embed-fields>
+							</discord-embed>
+							<discord-attachments slot="components">
+								<discord-action-row id="discord-clickable">
+									<discord-button type="primary" onclick="clickButton(1);">1</discord-button>
+									<discord-button type="primary" onclick="clickButton(2)">2</discord-button>
+									<discord-button type="primary" onclick="clickButton(3)">3</discord-button>
+								</discord-action-row>
+
+								<discord-action-row id="discord-clickable">
+									<discord-button type="primary" onclick="clickButton(4)">4</discord-button>
+									<discord-button type="primary" onclick="clickButton(5)">5</discord-button>
+									<discord-button type="primary" onclick="clickButton(6)">6</discord-button>
+								</discord-action-row>
+
+								<discord-action-row>
+									<discord-button type="primary" onclick="clickButton(7)">7</discord-button>
+									<discord-button type="primary" onclick="clickButton(8)">8</discord-button>
+									<discord-button type="primary" onclick="clickButton(9)">9</discord-button>
+								</discord-action-row>
+
+								<discord-action-row id="discord-clickable">
+									<discord-button type="success" onclick="clickButton(-1)">Verify</discord-button>
+									<discord-button type="destructive" onclick="clickButton(-2)">Retry</discord-button>
+								</discord-action-row>
+							</discord-attachments>
+						</discord-message>
+					</discord-messages>
+				</div>
+			</div>
+		</div>
+
+		<div class="container">
+			<div class="row pt-4 pb-4">
+				<div class="col-lg-6 pt-4 pb-4 d-inline-flex align-items-center justify-content-center">
+					<discord-messages class="box-ring-right">
+						<discord-message profile="invi">
+							<discord-command slot="reply" profile="siris" command="/leaderboard">
+							</discord-command>
+							<discord-embed author-image="./assets/server.webp" author-name="Invi" color="#5865F2"
+								embed-title="Invites Leaderboard" thumbnail="./assets/lb.webp">
+								<discord-embed-fields slot="fields">
+									<discord-embed-field field-title="" id="leaderboard-embed">
+										<div>
+											<span><b class="rank">01.</b></span>
+											<discord-mention class="name">Siris</discord-mention>
+											<b class="total">・342</b> (
+											<span class="joins">543</span>
+											<discord-custom-emoji name=":joins:" embed-emoji="true">
+											</discord-custom-emoji>, <span class="leaves">201</span>
+											<discord-custom-emoji name=":leaves:" embed-emoji="true">
+											</discord-custom-emoji>, <span class="bonus">0</span>
+											<discord-custom-emoji name=":bonus:" embed-emoji="true">
+											</discord-custom-emoji>)
+										</div>
+										<div>
+											<span><b class="rank">02.</b></span>
+											<discord-mention class="name">Isa</discord-mention>
+											<b class="total">・308</b> (
+											<span class="joins">313</span>
+											<discord-custom-emoji name=":joins:" embed-emoji="true">
+											</discord-custom-emoji>, <span class="leaves">5</span>
+											<discord-custom-emoji name=":leaves:" embed-emoji="true">
+											</discord-custom-emoji>, <span class="bonus">0</span>
+											<discord-custom-emoji name=":bonus:" embed-emoji="true">
+											</discord-custom-emoji>)
+										</div>
+										<div>
+											<span><b class="rank">03.</b></span>
+											<discord-mention class="name">Ryth</discord-mention>
+											<b class="total">・305</b> (
+											<span class="joins">404</span>
+											<discord-custom-emoji name=":joins:" embed-emoji="true">
+											</discord-custom-emoji>, <span class="leaves">99</span>
+											<discord-custom-emoji name=":leaves:" embed-emoji="true">
+											</discord-custom-emoji>, <span class="bonus">0</span>
+											<discord-custom-emoji name=":bonus:" embed-emoji="true">
+											</discord-custom-emoji>)
+										</div>
+										<div>
+											<span><b class="rank">04.</b></span>
+											<discord-mention class="name">Hope</discord-mention>
+											<b class="total">・243</b> (
+											<span class="joins">523</span>
+											<discord-custom-emoji name=":joins:" embed-emoji="true">
+											</discord-custom-emoji>, <span class="leaves">280</span>
+											<discord-custom-emoji name=":leaves:" embed-emoji="true">
+											</discord-custom-emoji>, <span class="bonus">0</span>
+											<discord-custom-emoji name=":bonus:" embed-emoji="true">
+											</discord-custom-emoji>)
+										</div>
+										<div>
+											<span><b class="rank">05.</b></span>
+											<discord-mention class="name">Jane</discord-mention>
+											<b class="total">・240</b> (
+											<span class="joins">561</span>
+											<discord-custom-emoji name=":joins:" embed-emoji="true">
+											</discord-custom-emoji>, <span class="leaves">321</span>
+											<discord-custom-emoji name=":leaves:" embed-emoji="true">
+											</discord-custom-emoji>, <span class="bonus">0</span>
+											<discord-custom-emoji name=":bonus:" embed-emoji="true">
+											</discord-custom-emoji>)
+										</div>
+										<div>
+											<span><b class="rank">06.</b></span>
+											<discord-mention class="name">Ryuk</discord-mention>
+											<b class="total">・209</b> (
+											<span class="joins">235</span>
+											<discord-custom-emoji name=":joins:" embed-emoji="true">
+											</discord-custom-emoji>, <span class="leaves">26</span>
+											<discord-custom-emoji name=":leaves:" embed-emoji="true">
+											</discord-custom-emoji>, <span class="bonus">0</span>
+											<discord-custom-emoji name=":bonus:" embed-emoji="true">
+											</discord-custom-emoji>)
+										</div>
+										<div>
+											<span><b class="rank">07.</b></span>
+											<discord-mention class="name">Creed</discord-mention>
+											<b class="total">・201</b> (
+											<span class="joins">203</span>
+											<discord-custom-emoji name=":joins:" embed-emoji="true">
+											</discord-custom-emoji>, <span class="leaves">2</span>
+											<discord-custom-emoji name=":leaves:" embed-emoji="true">
+											</discord-custom-emoji>, <span class="bonus">0</span>
+											<discord-custom-emoji name=":bonus:" embed-emoji="true">
+											</discord-custom-emoji>)
+										</div>
+										<div>
+											<span><b class="rank">08.</b></span>
+											<discord-mention class="name">Waylord</discord-mention>
+											<b class="total">・175</b> (
+											<span class="joins">370</span>
+											<discord-custom-emoji name=":joins:" embed-emoji="true">
+											</discord-custom-emoji>, <span class="leaves">195</span>
+											<discord-custom-emoji name=":leaves:" embed-emoji="true">
+											</discord-custom-emoji>, <span class="bonus">0</span>
+											<discord-custom-emoji name=":bonus:" embed-emoji="true">
+											</discord-custom-emoji>)
+										</div>
+										<div>
+											<span><b class="rank">09.</b></span>
+											<discord-mention class="name">Rock</discord-mention>
+											<b class="total">・166</b> (
+											<span class="joins">358</span>
+											<discord-custom-emoji name=":joins:" embed-emoji="true">
+											</discord-custom-emoji>, <span class="leaves">192</span>
+											<discord-custom-emoji name=":leaves:" embed-emoji="true">
+											</discord-custom-emoji>, <span class="bonus">0</span>
+											<discord-custom-emoji name=":bonus:" embed-emoji="true">
+											</discord-custom-emoji>)
+										</div>
+										<div>
+											<span><b class="rank">010.</b></span>
+											<discord-mention class="name">Shane</discord-mention>
+											<b class="total">・156</b> (
+											<span class="joins">302</span>
+											<discord-custom-emoji name=":joins:" embed-emoji="true">
+											</discord-custom-emoji>, <span class="leaves">146</span>
+											<discord-custom-emoji name=":leaves:" embed-emoji="true">
+											</discord-custom-emoji>, <span class="bonus">0</span>
+											<discord-custom-emoji name=":bonus:" embed-emoji="true">
+											</discord-custom-emoji>)
+										</div>
+									</discord-embed-field>
+									<discord-embed-field field-title="Your rank" inline inline-index="1"
+										class="lb-rank">
+										<span class="code-block-inline"><b>#1</b></span>
+									</discord-embed-field>
+									<discord-embed-field field-title="Your invites" inline inline-index="2">
+										<b>342</b> invites
+									</discord-embed-field>
+									<discord-embed-field field-title="Total" inline inline-index="3">
+										<b>159</b> inviters<br><b>2153</b> invites
+									</discord-embed-field>
+								</discord-embed-fields>
+								<discord-embed-footer slot="footer" id="lb-footer">
+									Page 1/2
+								</discord-embed-footer>
+							</discord-embed>
+							<discord-attachments slot="components">
+								<discord-action-row id="discord-clickable">
+									<discord-button type="destructive" onclick="clickButton(-100);">Back
+									</discord-button>
+									<discord-button type="success" onclick="clickButton(100);">Next</discord-button>
+								</discord-action-row>
+							</discord-attachments>
+						</discord-message>
+					</discord-messages>
+				</div>
+				<div class="col-lg-6 pt-4 pb-4 d-inline-flex align-items-center justify-content-center">
+					<p>
+					<div class="list">
+						<h3 class="bold-s">Invite and Utility commands</h3>
+						<ul>
+							<li>Invite commands such as Invites, Inviter, Invited and leaderboard</li>
+							<li>Utility features such as embed builder, invitelink purging, membercount and stats </li>
+							<li>Info commands about server, users, roles, channels, invites and colours</li>
+						</ul>
+					</div>
+					</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="container">
+			<br><br><br>
+			<div class="row">
+				<div class="col-lg-12 text-center">
+					<a id="premium">
+						<h2 class="bold-p">PREMIUM</h2>
+					</a>
+				</div>
+			</div>
+			<br>
+		</div>
+
+		<div class="container">
+			<div class="card-deck">
+				<div class="card bg-dark text-white tier-small">
+					<div class="card-body tier-1">
+						<h5 class="card-title">TIER I</h5>
+						<p class="card-text">
+						<ul>
+							<li>Prioritised invite tracking</li>
+							<li>Prioritised inviter command response</li>
+							<li>Reduced command cooldowns</li>
+							<li>Bypass vote-locked commands</li>
+							<li>Special role</li>
+						</ul>
+						<div class="d-flex justify-content-center">
+							<button type="button" class="btn btn-lg btn-1"
+								onclick="window.open('https://discord.gg/3Xkb6bYzxw', '_blank')">
+								Purchase
+							</button>
+						</div>
+						</p>
+					</div>
+				</div>
+				<div class="card bg-dark text-white tier-big">
+					<div class="card-body tier-3">
+						<h5 class="card-title">TIER III</h5>
+						<p class="card-text">
+						<ul>
+							<li>Get your own custom bot</li>
+							<li>Custom username and avatar for the bot</li>
+							<li>Better uptime and stability</li>
+							<li>Customize the verification embed</li>
+							<li>Autokick users if they fail to verify</li>
+							<li>Ability to disable commands</li>
+							<li>Priority support</li>
+							<li>Special role</li>
+						</ul>
+						<div class="d-flex justify-content-center">
+							<button class="btn btn-lg btn-3" data-sellix-product="6256ca3bcfaf4" type="submit"
+								alt="Buy Now with sellix.io">
+								Purchase
+							</button>
+						</div>
+						</p>
+					</div>
+				</div>
+				<div class="card bg-dark text-white tier-small">
+					<div class="card-body tier-2">
+						<h5 class="card-title">TIER II</h5>
+						<p class="card-text">
+						<ul>
+							<li>Server-wide bypass for vote-locked commands</li>
+							<li>Customize the verification embed</li>
+							<li>Priority support</li>
+							<li>Special role</li>
+						</ul>
+						<div class="d-flex justify-content-center">
+							<button type="button" class="btn btn-lg btn-2"
+								onclick="window.open('https://discord.gg/3Xkb6bYzxw', '_blank')">
+								Purchase
+							</button>
+						</div>
+						</p>
+					</div>
+				</div>
+			</div> <br><br>
+			<p style="text-align: center; font-weight: 600;">Please join our <a href="https://discord.gg/3Xkb6bYzxw"
+					target="_blank">Support Server</a> or visit our <a href="https://invi.sellix.io/"
+					target="_blank">Sellix page</a> if you wish to purchase a
+				premium tier</p>
+		</div>
+
+		<footer class="page-footer font-small stylish-color-dark pt-4">
+			<div class="container text-center text-md-center">
+				<div class="row">
+					<div class="col-md-4 mx-auto">
+						<h5 class="font-weight-bold text-uppercase mt-3 mb-4">Credits</h5>
+						<p><a href="https://github.com/skyra-project/discord-components" target="_blank">Discord
+								Components</a><br><a href="https://discord.gg/6zhuSGy7Dn" target="_blank">Icons</a></p>
+					</div>
+					<hr class="clearfix w-100 d-md-none">
+					<div class="col-md-4 mx-auto">
+						<h5 class="font-weight-bold text-uppercase mt-3 mb-4">Links</h5>
+						<ul class="list-unstyled">
+							<li>
+								<a href="https://discord.com/api/oauth2/authorize?client_id=873934253468024852&permissions=347176&scope=bot%20applications.commands"
+									target="_blank">Invite Link</a>
+							</li>
+							<li>
+								<a href="https://discord.gg/3Xkb6bYzxw" target="_blank">Support Server</a>
+							</li>
+							<li>
+								<a href="https://docs.invi-bot.xyz" target="_blank">Documentation</a>
+							</li>
+							<li>
+								<a href="https://top.gg/bot/873934253468024852" target="_blank">Top.GG</a>
+							</li>
+						</ul>
+					</div>
+					<hr class="clearfix w-100 d-md-none">
+					<div class="col-md-4 mx-auto">
+						<h5 class="font-weight-bold text-uppercase mt-3 mb-4">Legal</h5>
+						<p><a href="https://docs.invi-bot.xyz/terms-and-conditions/tos" target="_blank">Terms of
+								Service</a><br><a href="https://docs.invi-bot.xyz/terms-and-conditions/privacy-policy"
+								target="_blank">Privacy
+								Policy</a></p>
+					</div>
+				</div>
+			</div>
+		</footer>
+
+		<script defer type="text/javascript" src="./scripts/script.js"></script>
+		<script defer src="https://cdn.sellix.io/static/js/embed.js"></script>
+		<link href="https://cdn.sellix.io/static/css/embed.css" rel="stylesheet" />
+</body>
+
+</html>

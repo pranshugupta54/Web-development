@@ -1,0 +1,19 @@
+table,
+tr,
+th,
+td {
+    border: 2px solid black;
+    border-collapse: collapse;
+    color: red;
+    padding: 10px;
+}
+
+td{
+    background-color: aqua;
+    font-family: "BlockBertholdTextured", Times, Arial, Helvetica, sans-serif;
+}
+
+th{
+    background-color: tomato;
+    color: white;
+}

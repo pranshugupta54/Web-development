@@ -1,0 +1,40 @@
+
+footer{
+    font-size: 1em;
+    padding: 20px;
+    text-align: center;
+}
+
+nav{
+    background-color: green;
+    color: white;
+    left: 0;
+    display: flex;
+    flex-direction: row;
+    flex-shrink: inherit;
+    width: 20%;
+    text-align: center;
+    align-items: stretch;
+    height: 100vh;
+}
+body{
+    margin: 0;
+    text-align: center;
+}
+.parts{
+    display: flex;
+    flex-direction: row;
+}
+.maintext{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+header, footer{
+    flex-grow: 0.2;
+    background-color: #241426;
+    color: white;
+}
+main{
+    flex-grow: 0.6;
+}

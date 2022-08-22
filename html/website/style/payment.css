@@ -1,0 +1,139 @@
+*{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+fieldset{
+    border-color: black;
+    background-color: #f2f2f2;
+    border-radius: 10px;
+    width: fit-content;
+    margin: auto;
+}
+form{
+    align-items: center;
+}
+
+fieldset p{
+    color: black;
+    size: 150;
+    font-size:0.5cm;
+}
+
+fieldset h2{
+    color: rgb(237, 18, 55);
+    background-color: rgba(204, 204, 204, 0.03);
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+input[type="date"],
+input[type="password"],
+select,
+textarea {
+    background-size: 1cm;
+    background-color: white;
+    border: 2px solid #ccc;
+    width: 90%;
+    padding: 12px;
+    border-radius: 5px;
+    margin: 10px;
+
+}
+
+input[type="submit"]{
+    padding: 12px 20px;
+    background-color: rgb(98, 213, 98);
+    border: none;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.gender_class{
+    background-size: 1cm;
+    background-color: white;
+    border: 2px solid #ccc;
+    width: 90%;
+    padding: 12px;
+    border-radius: 5px;
+
+}
+
+header {
+    padding: 40px;
+    background-color: rgb(17, 124, 143);
+    align-items: center;
+    text-align: center;
+
+}
+
+header h1 {
+    text-align: center;
+    font-size: 40px;
+    color: white;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+/* section:nth-child(odd) {
+    background-color: rgb(206, 40, 40);
+    width: fit-content;
+} */
+
+
+ul{
+    list-style-type: none;
+    text-indent: -35px;
+}
+
+body {
+    margin: 0px;
+    font-size: 17px;
+    padding: 0px;
+}
+
+
+
+nav {
+    position: sticky;
+    padding: 20px;
+    background-color: #241426;
+    text-decoration: none;
+}
+
+nav a{
+    font-size: 1.5em;
+    padding: 20px;
+    text-decoration: none;
+    color: #ffd8ac;
+}
+
+.nav{
+    position: sticky;
+    top: 0;
+}
+
+a:hover{
+    font-size: 1.7em;
+    color: #ff663c;
+}
+
+footer{
+    background-color: #241426;
+    color: white;
+    font-size: 1em;
+    padding: 20px;
+    text-align: center;
+    margin-top: 50px;
+}
+
+
+
+.req{
+    margin: 0;
+    font-style: italic;
+    font-size: small;
+}
+h2{
+    margin: 0;
+}

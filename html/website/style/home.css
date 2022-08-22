@@ -1,0 +1,53 @@
+nav {
+    position: sticky;
+    padding: 20px;
+    background-color: #241426;
+    text-decoration: none;
+}
+
+nav a{
+    font-size: 1.5em;
+    padding: 20px;
+    text-decoration: none;
+    color: #ffd8ac;
+}
+
+.nav{
+    position: sticky;
+    top: 0;
+}
+
+a:hover{
+    font-size: 1.7em;
+    color: #ff663c;
+}
+
+footer{
+    background-color: #241426;
+    color: white;
+    font-size: 1em;
+    padding: 20px;
+    text-align: center;
+}
+
+body{
+    margin: 0px;
+}
+
+header{
+    height: 200px;
+    background: #ff663c;
+    padding: 0.1%;
+    font-size: 3em;
+    text-align: center;
+    margin: 0px !important;
+    top: 0px;
+}
+.heading{
+    top: 0px;
+}
+
+.bodytext{
+    text-align: center;
+    
+}

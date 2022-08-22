@@ -1,0 +1,83 @@
+.heading img {
+    border-radius: 100%;
+    width: 64px;  
+    float: left;
+}
+.heading{
+    background-color: rgba(0, 0, 0, 0.102);
+    border-radius: 16px;
+    padding: 2%;
+}
+.heading h2{
+    padding-left: 8%;
+    padding-top: 1%;
+    font-size: 35px;
+}
+.top_part{
+    padding: 15%;
+    padding-top: 5%;
+    border: none;
+    padding-bottom: 3%;
+}
+
+.bottom img{
+    border-radius: 100%;
+    width: 150px; 
+    padding: 3%;
+}
+
+.bottom{
+    width: fit-content;
+    margin: 0 auto;
+    margin-bottom: 50px;
+
+    background-color: white;
+    display: flex;
+    border-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+
+.img_part {
+    background-color: #70a1ff;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    width: 100%;
+    align-items: center;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.formm{
+    background-color: white;
+    padding: 10px;
+
+}
+
+.mainscreen{
+    background-image: url("/Users/tarushgupta/Desktop/codingC/html/img/bg.svg");
+}
+
+
+h3{
+    font-size: 30px;
+    padding: 2%;
+    display: block;
+}
+
+input{
+    width: 80%;
+    margin: 5%;
+    padding: 2%;
+    border-radius: 5px;
+    display: block;
+
+}
+
+
+
+body{
+    background: no-repeat linear-gradient(180deg, #f54f63 70%, #DFDBE5 70%);
+
+}

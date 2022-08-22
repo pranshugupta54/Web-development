@@ -1,0 +1,53 @@
+.box{
+    border: solid;
+    margin: 3%;
+    width: 30%;
+    box-shadow: 5px 5px 15px black;
+    border-radius: 8px;
+}
+
+.buttons{
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.box img{
+    width: 100%;
+    border-top-left-radius: inherit;
+    border-top-right-radius: inherit;
+}
+
+.boxes1{
+    display: flex;
+    align-items: center;
+
+}
+
+
+.boxes2{
+    display: flex;
+    align-items: center;
+}
+
+
+input{
+    background-color: rgb(87, 85, 82);
+    color: white;
+    padding: 8px;
+    font-size: large;
+    border-radius: 3px;
+}
+
+
+p{
+    font-size: large;
+    padding: 30px;
+    margin: 0;
+}
+
+h2{
+    margin: 0;
+    padding: 20px;
+    padding-bottom: 0;
+    text-align: center;
+}

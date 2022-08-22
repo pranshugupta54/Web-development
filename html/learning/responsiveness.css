@@ -1,0 +1,54 @@
+/* @media (any-hover) {
+    body{
+        color: red;
+    }
+} */
+
+p{  
+    margin: 0 auto; 
+    padding: 4%;
+    display: inline-flex;
+    float:left;
+    clear:none;
+    font-size: larger;
+}
+
+@media screen and (min-width:801px) {
+    p{
+        width: 17%;
+    }
+}
+
+@media screen and (min-width:601px) and (max-width:800px) {
+    p{ 
+        width: 42%;
+    }
+}
+
+
+@media screen and (max-width:600px) {
+    p{ 
+       width: 92%;
+    }
+}
+
+body{
+    margin: 0;
+}
+
+.boxes{
+    
+}
+
+.one1{
+    background-color: aqua;
+}
+.one2{
+    background-color: rgb(41, 245, 245);
+}
+.one3{
+    background-color: rgb(106, 247, 247);
+}
+.one4{
+    background-color: rgb(166, 248, 248);
+}
