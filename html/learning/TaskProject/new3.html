@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    
+  </head>
+  <body>
+    <!--Heading column starts-->
+    <div class="container text-center pt-3">
+        <div class="row">
+          <div class="col">
+            Task List 1
+          </div>
+          <div class="col">
+            Task List 2
+          </div>
+          <div class="col">
+            Task List 3
+          </div>
+        </div>
+      </div>
+    <!--Heading column ends-->
+    
+    <!--column starts-->
+   <div class="container text-center">
+    <div class="row m-1 p-4 pt-0">
+        <!-- column 1 -->
+      <div class="col text-light border border-primary p-3">
+        <div class="input-group m-2 align-items-center">
+            <input type="text" class="form-control w-2" placeholder="Add item" id="addTask1" value="" required>
+            <button class="btn btn-outline-secondary bg-secondary text-light" type="button" onclick='addFunction(addTask1,TaskList1)'>Add</button>
+            
+        </div>
+        <ol class="list-group text-start text-black">
+          <div class="input-group m-2 align-items-center" id="TaskList1">
+            <input type="text" class="m-0 mt-2 form-control w-75 rounded-0" value="Item 1" value="" disabled>
+            <button class="btn mt-2 btn-outline-danger rounded-0" type="button" onclick='addFunction(addTask1,TaskList1)'>Remove</button>
+            <input type="text" class="m-0 mt-2 form-control w-75 rounded-0" placeholder="Item 1" value="" required>
+            <button class="btn mt-2 btn-outline-danger rounded-0" type="button" onclick='addFunction(addTask1,TaskList1)'>Remove</button>
+          </div>       
+        </ol>
+      </div>
+
+      <!-- column 2 -->
+      <div class="col text-light border border-primary p-3 ms-2">
+        <div class="input-group m-2 align-items-center">
+            <input type="text" class="form-control w-2" placeholder="Add item" id="addTask2" value="" required>
+            <button class="btn btn-outline-secondary bg-secondary text-light" type="button" onclick='addFunction(addTask2,TaskList2)'>Add</button>
+        </div>
+        <ol class="list-group m-2 list-group-numbered text-start" id="TaskList2">
+            <li class="list-group-item">A list item</li>
+        </ol>
+      </div>
+
+      <!-- column 3 -->
+      <div class="col text-light border border-primary p-3 ms-2">
+        <div class="input-group m-2 align-items-center">
+            <input type="text" class="form-control w-2" placeholder="Add item" id="addTask3" value="" required>
+            <button class="btn btn-outline-secondary bg-secondary text-light" type="button" onclick='addFunction(addTask3,TaskList3)'>Add</button>
+        </div>
+        <ol class="list-group m-2 list-group-numbered text-start" id="TaskList3">
+            <li class="list-group-item">A list item</li>
+        </ol>
+      </div>
+    </div>
+    <!-- columns end -->
+  </div>
+
+    <!-- scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous">
+    </script>
+        <script src="new3.js">
+        </script>
+  </body>
+</html>
