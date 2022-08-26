@@ -32,6 +32,7 @@ function clicked(btnClicked){
         console.log(`Value1: ${value1}.`)
         value1 = num1;
         num1 = 0;
+        operator = 'none';
         return;
     }
     else if(btnContent === '*' || btnContent === '+' || btnContent === '-' || btnContent === '/'){
