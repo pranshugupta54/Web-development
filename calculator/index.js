@@ -30,9 +30,11 @@ function clicked(btnClicked){
         // finalResult.innerHTML = "Done";
         console.log(`Num1: ${num1}.`)
         console.log(`Value1: ${value1}.`)
+        value1 = num1;
+        num1 = 0;
         return;
     }
-    else if(btnContent === 'multiply' || btnContent === 'addition' || btnContent === 'subtraction'){
+    else if(btnContent === 'multiply' || btnContent === 'addition' || btnContent === 'subtraction' || btnContent === 'divide'){
         // num1 += value1;
         console.log(`num1 = ${num1}, value1 = ${value1}, btnContent = ${btnContent}.`);
         num1 = calc(value1,num1,operator);
