@@ -34,7 +34,7 @@ function clicked(btnClicked){
         num1 = 0;
         return;
     }
-    else if(btnContent === 'multiply' || btnContent === 'addition' || btnContent === 'subtraction' || btnContent === 'divide'){
+    else if(btnContent === '*' || btnContent === '+' || btnContent === '-' || btnContent === '/'){
         // num1 += value1;
         console.log(`num1 = ${num1}, value1 = ${value1}, btnContent = ${btnContent}.`);
         num1 = calc(value1,num1,operator);
@@ -45,7 +45,7 @@ function clicked(btnClicked){
         console.log("value1 =" + value1);
 
         console.log("---------");
-        // resultShown.innerHTML = btnContent;
+        resultShown.innerHTML = btnContent;
         finalResult.innerHTML = num1;
         finalResult.innerHTML = num1;
 
@@ -53,6 +53,7 @@ function clicked(btnClicked){
         value1 = 0;
        // btnContent(num1,num2);
         operator = btnContent;
+        return;
     }
     else if(btnContent == "Clear All"){
         console.log("Clear");
@@ -68,6 +69,7 @@ function clicked(btnClicked){
 }
 
 function multiply(num1,num2){
+    console.log("Multiplication result = " + num1*num2);
     return num1*num2;
 }
 
@@ -85,19 +87,19 @@ function divide(num1,num2){
 
 
 function calc(x,y,o){
-    if(o == "addition"){
+    if(o == "+"){
         resultShown.innerHTML = '+';
         return addition(x,y);
     }
-    if(o == "multiply"){
+    if(o == "*"){
         resultShown.innerHTML = '*';
         return multiply(x,y);
     }
-    if(o == "subtraction"){
+    if(o == "-"){
         resultShown.innerHTML = '-';
         return subtraction(x,y);
     }
-    if(o == "divide"){
+    if(o == "/"){
         resultShown.innerHTML = '/';
         return divide(x,y);
     }
