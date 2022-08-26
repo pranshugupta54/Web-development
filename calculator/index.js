@@ -16,21 +16,26 @@ for (let i = 0; i < buttons.length; i++) {
     
 }
 num1 = 0;
+operator = 'none';
 function clicked(btnClicked){
 
     btnContent = btnClicked.target.value
     console.log(btnContent);
     if(btnContent === 'equal'){
-        finalResult.innerHTML = num1;
+        num1 = calc(value1,num1,operator);
+        finalResult.innerHTML = "";
         resultShown.innerHTML = num1;
+        resultShown.classList.add("fs-1");
+        // alert("ok")
+        // finalResult.innerHTML = "Done";
         console.log(`Num1: ${num1}.`)
         console.log(`Value1: ${value1}.`)
+        return;
     }
-    if(btnContent === 'multiply' || btnContent === 'addition' || btnContent === 'subtraction'){
-        operator = btnContent;
+    else if(btnContent === 'multiply' || btnContent === 'addition' || btnContent === 'subtraction'){
         // num1 += value1;
         console.log(`num1 = ${num1}, value1 = ${value1}, btnContent = ${btnContent}.`);
-        num1 = calc(value1,num1,btnContent);
+        num1 = calc(value1,num1,operator);
         console.log("---------");
         console.log("button " + btnContent);
         console.log("---------");
@@ -45,10 +50,12 @@ function clicked(btnClicked){
         console.log("---------");
         value1 = 0;
        // btnContent(num1,num2);
+        operator = btnContent;
     }
     else if(btnContent == "Clear All"){
         console.log("Clear");
         value1 = 0;
+        num1 = 0;
     }
     else{
         value1 = value1*10 + Number(btnContent);
@@ -67,11 +74,11 @@ function addition(num1,num2){
 }
 
 function subtraction(num1,num2){
-    return num1-num2;
+    return num2-num1;
 }
 
 function divide(num1,num2){
-    return num1/num2;
+    return num2/num1;
 }
 
 
@@ -91,6 +98,9 @@ function calc(x,y,o){
     if(o == "divide"){
         resultShown.innerHTML = '/';
         return divide(x,y);
+    }
+    if(o == "none"){
+        return x;
     }
     
 }
