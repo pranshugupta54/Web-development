@@ -1,73 +1,57 @@
-value1 = 0;
-value2 = 0;
+// Setting values to Null
+value1 = 0; // Shows partial result 
+num1 = 0; // Shows final result 
+operator = 'none'; // Setting it to none for first time and to store the first operation in first operation
 
-// decimal = '.';
-// multiply = '*';
-// addition = '+';
-// subtraction = '-';
+// Fetching from HTML file which needs an edit on result
 
-let buttons = document.querySelectorAll("button");
-let resultShown = document.querySelector("#outputResult");
-let finalResult = document.querySelector("#finalResult");
-// console.log(resultShown.innerHTML);
+let buttons = document.querySelectorAll("button"); // Getting all buttons
+let resultShown = document.querySelector("#outputResult"); // 1st line of output window
+let finalResult = document.querySelector("#finalResult"); // 2nd line which shows actual result
 
+
+// Adding event listener for triggering function
 for (let i = 0; i < buttons.length; i++) {
     buttons[i].addEventListener("click", clicked);
-    
 }
-num1 = 0;
-operator = 'none';
+
+// Defining Function
 function clicked(btnClicked){
-
-    btnContent = btnClicked.target.value
-    console.log(btnContent);
-    if(btnContent === 'equal'){
-        num1 = calc(value1,num1,operator);
-        finalResult.innerHTML = "";
-        resultShown.innerHTML = num1;
-        resultShown.classList.add("fs-1");
-        // alert("ok")
-        // finalResult.innerHTML = "Done";
-        console.log(`Num1: ${num1}.`)
-        console.log(`Value1: ${value1}.`)
-        value1 = num1;
-        num1 = 0;
-        operator = 'none';
+    btnContent = btnClicked.target.value // Putting value of the button. Eg: 1,2,3,+,- etc.
+    // console.log(btnContent);
+    if(btnContent === 'equal'){ //To evaluate the result when "=" button is pressed.
+        num1 = calc(value1,num1,operator); // Sends request to Calc function
+        finalResult.innerHTML = ""; // Removing the 2nd line result
+        resultShown.innerHTML = num1; // Adding final answer to the result 
+        resultShown.classList.add("fs-1"); // Increasing the size of result
+        value1 = num1; // Putting num1 in value1 so that calculator works even after evaluating result from the answer instead of 0.
+        num1 = 0; // Final result is null now
+        operator = 'none'; // Restting operator to start
         return;
     }
+
+    // Operation button clicked
     else if(btnContent === '*' || btnContent === '+' || btnContent === '-' || btnContent === '/'){
-        // num1 += value1;
-        console.log(`num1 = ${num1}, value1 = ${value1}, btnContent = ${btnContent}.`);
-        num1 = calc(value1,num1,operator);
-        console.log("---------");
-        console.log("button " + btnContent);
-        console.log("---------");
-        console.log("num1 =" + num1);
-        console.log("value1 =" + value1);
-
-        console.log("---------");
-        resultShown.innerHTML = btnContent;
-        finalResult.innerHTML = num1;
-        finalResult.innerHTML = num1;
-
-        console.log("---------");
-        value1 = 0;
-       // btnContent(num1,num2);
-        operator = btnContent;
+        num1 = calc(value1,num1,operator); // Sends request to Calc function
+        resultShown.innerHTML = btnContent; // Shows +,-,/,* on 1st line 
+        finalResult.innerHTML = num1; // Shows partial result till now
+        value1 = 0; // To input new value
+        operator = btnContent; // So that first operator works after 2nd input
         return;
     }
-    else if(btnContent == "Clear All"){
-        console.log("Clear");
+    else if(btnContent == "Clear All"){ // Clearing and starting as fresh
         value1 = 0;
         num1 = 0;
     }
-    else{
+    else{ // Normal input from 0 to 9
         value1 = value1*10 + Number(btnContent);
     }
-    console.log(value1);
-    resultShown.innerHTML = value1;
+    resultShown.innerHTML = value1; 
     finalResult.innerHTML = num1;
 }
+
+
+// Functions ---->
 
 function multiply(num1,num2){
     console.log("Multiplication result = " + num1*num2);
@@ -107,5 +91,4 @@ function calc(x,y,o){
     if(o == "none"){
         return x;
     }
-    
 }
