@@ -21,15 +21,26 @@ function nextSequence(){
     // checkAnswer(level);   
 }
 
-function checkAnswer(currentLevel){
-    console.log("Game pattern :" + JSON.stringify(gamePattern));
-    console.log("User Pattern :" + userClickedPattern);
-    if(JSON.stringify(gamePattern) == JSON.stringify(userClickedPattern)){
-        console.log("Same");
-        userClickedPattern = '';
-        nextSequence();
+currentLevel = 0;
+function checkAnswer(userInput){
+    if(userInput == gamePattern){
+        console.log("YES");
+        userClickedPattern = [];
+        setTimeout(nextSequence(),1000);
+        // nextSequence();
     }
     else console.log("NO");
+
+
+    // console.log("Game pattern :" + JSON.stringify(gamePattern));
+    // console.log("User Pattern :" + userClickedPattern);
+    // if(JSON.stringify(gamePattern) == JSON.stringify(userClickedPattern)){
+    //     console.log("Same");
+        // userClickedPattern = [];
+        // setTimeout(nextSequence(),1000);
+        // nextSequence();
+    // }
+    // else console.log("NO");
 }
 
 $(".btn").click(function(){
@@ -43,7 +54,7 @@ $(".btn").click(function(){
     console.log("User chosen color: " + userChosenColour);
     animatePress(userChosenColour);
     // setTimeout(nextSequence(),1000);
-    checkAnswer();
+    checkAnswer(userChosenColour);
 });
 
 function animatePress(currentColour){
