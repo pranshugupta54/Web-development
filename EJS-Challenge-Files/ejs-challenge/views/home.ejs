@@ -2,5 +2,14 @@
 
 <h1>Home</h1>
 <p> <%= startingContent %> </p>
-<% console.log(posts) %> 
+<br>
+<% posts.forEach(function(post){ %>
+<h4> <%= post.title %> </h4>
+<% if(post.content.length > 100){%> 
+<p> <%= post.content.substring(0,100)+ "... " %><a href="/posts/<%=post.title%> ">Read More</a></p>
+<%} else{ %>
+    <%= post.content %> 
+<% } %>   
+<% }) %> 
+
 <%- include('partials/footer'); -%>
